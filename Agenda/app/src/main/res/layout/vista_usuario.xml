@@ -1,0 +1,85 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/usuario"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/lblNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgFoto"
+            android:text="Nombre"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblNombre"
+            android:layout_toRightOf="@id/imgFoto"
+            android:layout_marginTop="8dp"
+            android:text="Email"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lblTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblCorreo"
+            android:layout_toRightOf="@id/imgFoto"
+            android:layout_marginTop="8dp"
+            android:text="Telefono"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lblObservaciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lblTelefono"
+            android:layout_toRightOf="@id/imgFoto"
+            android:layout_marginTop="8dp"
+            android:text="Observaciones"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btnEditar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/lblObservaciones"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            app:tint="@android:color/holo_green_dark"
+            app:srcCompat="@android:drawable/ic_menu_edit"/>
+
+        <ImageButton
+            android:id="@+id/btnEliminar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_below="@id/lblObservaciones"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            app:tint="@android:color/holo_red_dark"
+            app:srcCompat="@android:drawable/ic_delete"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
